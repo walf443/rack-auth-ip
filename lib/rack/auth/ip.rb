@@ -1,6 +1,4 @@
 require 'ipaddr'
-require 'rack/auth/abstract/handler'
-require 'rack/auth/abstract/request'
 module Rack
   module Auth
     class IP

@@ -43,7 +43,7 @@ SPEC = Gem::Specification.new do |s|
 
 	#s.add_dependency('activesupport', '>=1.3.1')
 	#s.required_ruby_version = '>= 1.8.2'
-  s.add_dependency('date_time-duration', '>= 0.0.1')
+  s.add_dependency('rack', '>= 0.3.0')
 
 	s.files = PKG_FILES + EXTRA_RDOC_FILES
 	s.extensions = EXTENSIONS
