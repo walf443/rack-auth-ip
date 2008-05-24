@@ -17,7 +17,7 @@ DESCRIPTION       = <<-"END_DESCRIPTION"
 rack's moddleware to restrict ip address
 END_DESCRIPTION
 BIN_FILES         = %w(  )
-VERS              = "0.0.1"
+VERS              = "0.0.2"
 
 EXTRA_RDOC_FILES = []
 HECKLE_ROOT_MODULES = ["Rack::Auth::Ip"]
@@ -33,7 +33,7 @@ SPEC = Gem::Specification.new do |s|
 	s.description       = DESCRIPTION
 	s.author            = AUTHOR
 	s.email             = EMAIL
-	s.homepage          = HOMEPATH
+	s.homepage          = 'http://github.com/walf443/rack-auth-ip/tree/master'
 	s.executables       = BIN_FILES
 	s.rubyforge_project = RUBYFORGE_PROJECT
 	s.bindir            = "bin"
