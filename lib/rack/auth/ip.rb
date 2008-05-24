@@ -37,7 +37,7 @@ module Rack
             return @app.call(env)
           end
         end
-        return [403, {}, 'Forbidden' ]
+        return [403, {'Content-Type' => 'text/plain' }, 'Forbidden' ]
       end
     end
   end
