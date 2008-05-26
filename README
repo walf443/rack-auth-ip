@@ -7,7 +7,7 @@ middleware to restrict ip address
 in your_app.ru
   require 'rack/auth/ip'
   # allow access only local network
-  use Rack::Auth::IP, (%w( 192.168.0.0/24 ))
+  use Rack::Auth::IP, %w( 192.168.0.0/24 )
 
   # you can use block
   # ip is IPAddr instance.
@@ -26,7 +26,7 @@ middleware to restrict ip address
 
 === Gem Installation
 
-	gem install rackauthip
+	gem install rack-auth-ip
 
 == Features/Problems
 
