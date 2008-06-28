@@ -11,9 +11,9 @@ in your_app.ru
 
   # you can use block
   # ip is IPAddr instance.
-  use Rack::Auth::IP {|ip|
+  use Rack::Auth::IP do |ip|
     Your::Model::IP.count({ :ip => ip.to_s }) != 0 
-  }
+  end
 
 == Description
 middleware to restrict ip address

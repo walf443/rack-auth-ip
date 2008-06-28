@@ -1,6 +1,16 @@
 require 'ipaddr'
 module Rack
   module Auth
+    # in your_app.ru
+    #   require 'rack/auth/ip'
+    #   # allow access only local network
+    #   use Rack::Auth::IP, %w( 192.168.0.0/24 )
+
+    #   # you can use block
+    #   # ip is IPAddr instance.
+    #   use Rack::Auth::IP do |ip|
+    #     Your::Model::IP.count({ :ip => ip.to_s }) != 0 
+    #   end
     class IP
       module Util
         # consider using reverse proxy
@@ -16,13 +26,15 @@ module Rack
       end
       include Util
 
-      def initialize app, ip_list=nil
+      def initialize app, ip_list=nil, &block
         @app = app
         @ip_list = ip_list
 
         if @ip_list 
           @ip_list = @ip_list.map {|ip| IPAddr.new(ip) }
         end
+
+        @cond = block
       end
 
       def call env
@@ -33,7 +45,7 @@ module Rack
             return @app.call(env)
           end
         else
-          if yield(req_ip)
+          if @cond && @cond.call(req_ip)
             return @app.call(env)
           end
         end

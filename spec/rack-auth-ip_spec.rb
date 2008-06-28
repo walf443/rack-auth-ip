@@ -34,21 +34,16 @@ describe Rack::Auth::IP do
     end
   end
 
-  describe 'when without ip list' do
+  describe 'when with block' do
     before do
       @env = { "REMOTE_ADDR" => '127.0.0.1' }
       @app = proc {|env| env }
-      @auth_ip = Rack::Auth::IP.new(@app)
-    end
-
-    it 'should raise LocalJumpError without block' do
-      lambda { @auth_ip.call(@env) }.should raise_error(LocalJumpError)
     end
 
     it 'should recieve IPAddr instance in block' do
-      @auth_ip.call(@env) do |ip|
+      Rack::Auth::IP.new(@app) {|ip|
         ip.should == IPAddr.new(@env["REMOTE_ADDR"])
-      end
+      }.call(@env)
     end
   end
 
