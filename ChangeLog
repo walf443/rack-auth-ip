@@ -1,4 +1,41 @@
-== 0.0.1 / 2008-05-24
+commit dfd279f9ab5f5ec3c028765350dd0b7dcc986338
+Author: Keiji, Yoshimi <walf443@gmail.com>
+Date:   Sat Jun 28 12:53:47 2008 +0900
 
-* initial release
+    release 0.0.3
 
+commit b6a7d890b8ac9dd9edccc669b34a9f860943fcf5
+Author: Keiji, Yoshimi <walf443@gmail.com>
+Date:   Sat Jun 28 12:49:59 2008 +0900
+
+    fixed bug: using block was not worked.
+
+commit b5f1366e9f39aa0a37eb2996e8d35e58df05c920
+Author: Keiji, Yoshimi <walf443@gmail.com>
+Date:   Tue May 27 01:49:33 2008 +0900
+
+    Tweaked README.
+
+commit ddc24760138294f349003f683dc972f9a1f74539
+Author: Keiji, Yoshimi <walf443@gmail dot com>
+Date:   Sat May 24 15:23:06 2008 +0900
+
+    release 0.0.2
+
+commit 0fd1c34d64ff9df4b34da2c5c29c8ec2dc596b6c
+Author: Keiji, Yoshimi <walf443@gmail dot com>
+Date:   Sat May 24 15:21:04 2008 +0900
+
+    added content-type header.
+
+commit 7b8880ca5d3079aa3d87fafa0ab5316bc58f7a2b
+Author: Keiji, Yoshimi <walf443@gmail dot com>
+Date:   Sat May 24 14:17:36 2008 +0900
+
+    fixed dependency
+
+commit bdd84d2ef7eb015397d0d663399be6c4186730fc
+Author: Keiji, Yoshimi <walf443@gmail dot com>
+Date:   Sat May 24 14:05:50 2008 +0900
+
+    initial commit
