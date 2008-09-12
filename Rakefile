@@ -44,6 +44,11 @@ SPEC = Gem::Specification.new do |s|
 	#s.add_dependency('activesupport', '>=1.3.1')
 	#s.required_ruby_version = '>= 1.8.2'
   s.add_dependency('rack', '>= 0.3.0')
+  s.add_dependency('ipaddr_list')
+
+  if Gem::RubyGemsVersion >= "1.2"
+	  s.add_development_dependency('rspec', '>=1.1.4')
+  end
 
 	s.files = PKG_FILES + EXTRA_RDOC_FILES
 	s.extensions = EXTENSIONS

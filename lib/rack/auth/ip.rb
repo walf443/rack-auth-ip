@@ -1,4 +1,5 @@
 require 'ipaddr'
+require 'ipaddr_list'
 module Rack
   module Auth
     # in your_app.ru
@@ -30,8 +31,8 @@ module Rack
         @app = app
         @ip_list = ip_list
 
-        if @ip_list 
-          @ip_list = @ip_list.map {|ip| IPAddr.new(ip) }
+        if @ip_list && @ip_list.size > 0
+          @ip_list = IPAddrList.new(@ip_list)
         end
 
         @cond = block
@@ -41,7 +42,7 @@ module Rack
         req_ip = IPAddr.new(detect_ip(env))
 
         if @ip_list
-          if @ip_list.find {|ip| ip.include? req_ip }
+          if @ip_list.include?(req_ip)
             return @app.call(env)
           end
         else
