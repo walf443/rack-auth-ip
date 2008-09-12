@@ -1,3 +1,15 @@
+commit ea8fff69f3de69eb07bada4d21f5ca8b3010011b
+Author: Keiji, Yoshimi <walf443@gmail.com>
+Date:   Sat Sep 13 07:41:14 2008 +0900
+
+    change to use ipaddr_list.
+
+commit 77676282a599926dcaceb8d165c485a18d940587
+Author: Keiji, Yoshimi <walf443@gmail.com>
+Date:   Sat Jun 28 12:54:46 2008 +0900
+
+    update ChangeLog.
+
 commit dfd279f9ab5f5ec3c028765350dd0b7dcc986338
 Author: Keiji, Yoshimi <walf443@gmail.com>
 Date:   Sat Jun 28 12:53:47 2008 +0900
