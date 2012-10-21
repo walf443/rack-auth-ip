@@ -17,7 +17,7 @@ DESCRIPTION       = <<-"END_DESCRIPTION"
 rack's moddleware to restrict ip address
 END_DESCRIPTION
 BIN_FILES         = %w(  )
-VERS              = "0.0.4"
+VERS              = "0.0.5"
 
 EXTRA_RDOC_FILES = []
 HECKLE_ROOT_MODULES = ["Rack::Auth::Ip"]
