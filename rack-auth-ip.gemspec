@@ -13,5 +13,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/.*_spec.rb})
   gem.name          = "rack-auth-ip"
   gem.require_paths = ["lib"]
+  gem.add_dependency('ipaddr_list', '>= 0.0.2')
   gem.version       = Rack::Auth::Ip::VERSION
 end
